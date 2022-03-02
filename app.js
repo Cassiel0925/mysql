@@ -1,5 +1,5 @@
 //导入mysql模块
-const models = require('./db')
+// const models = require('./db')
 const mysql = require('mysql');
 const express = require('express')
 const app = express()
@@ -15,7 +15,12 @@ app.use(cors())
 //创建连接
 
 function connect() {
-    return mysql.createConnection(models.mysql)
+    return mysql.createConnection({
+        host: constant.dbHost,
+        user: constant.dbUser,
+        password: constant.dbPwd,
+        database: 'bookinfo'
+    })
 }
 
 //  推荐你可能会喜欢的书
