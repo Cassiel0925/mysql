@@ -31,4 +31,7 @@ const category = [
 
 module.exports = {
     category,
+    dbHost,
+    dbUser,
+    dbPwd
 }

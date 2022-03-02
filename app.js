@@ -108,6 +108,7 @@ app.get('/book/home', (req, res) => {
     const conn = connect()
     conn.query('select * from book where cover != \'\'',
         (err, results) => {
+            console.log(results);
             const length = results.length
             const guessYouLike = []
             const banner = [
