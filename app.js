@@ -313,7 +313,7 @@ app.post('/addUser', (req, res) => {
 })
 
 
-const server = app.listen(3300, () => {
+const server = app.listen(3300, 'localhost', () => {
     const host = server.address().address
     const port = server.address().port
 
